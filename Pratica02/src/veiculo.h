@@ -23,7 +23,9 @@ class Terrestre:public virtual Veiculo{
 	private:
 		int cap_pass;
 	protected:
-		Terrestre():Veiculo("_terrestre_"){};
+		Terrestre():Veiculo("_terrestre_"){
+			this->cap_pass=0;
+		};
 	public:
 		Terrestre(const char *nome):Veiculo(nome){
 			this->cap_pass = 5;
@@ -42,7 +44,9 @@ class Aquatico:public virtual Veiculo{
 	private:
 		float carga_max;
 	protected:
-		Aquatico():Veiculo("_aquático_"){};
+		Aquatico():Veiculo("_aquático_"){
+			this->carga_max=0;
+		};
 	public:
 		Aquatico(const char *nome):Veiculo(nome){
 			this->carga_max = 10;
